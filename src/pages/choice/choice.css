@@ -1,0 +1,162 @@
+#choice{
+    background: url('/css/images/bg.png') no-repeat top center/100% 100%;
+    color: #fff
+}
+
+#choice .inner .slogon-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 2;
+}
+
+#choice .inner .slogon-text h3{
+    font-family: 'mheiprc_medium';
+    font-size: 0.5rem;
+    text-align: center;
+    margin-top: 10%; 
+}
+
+#choice .inner .slogon-text p{
+    font-family: 'mheiprc_medium';
+    font-size:0.25rem;
+    text-align: center;
+    margin-bottom: 10%; 
+}
+
+#choice .inner .swiper-container {
+    width: 76%;
+    height: 432px;
+    margin-left: auto;
+    margin-right: auto;
+    /* max-width: 4rem; */
+}
+
+#choice .inner img {
+    width: 100%;
+    height: 100%;
+}
+.img-wrap{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.img-wrap h3{
+    font-size: 0.5rem;
+    margin-bottom: 10%;
+}
+
+.img-wrap p{
+    font-size: 0.25rem;
+}
+
+.img-item1{
+    background: url('/css/images/pic1.png') no-repeat top center/100% 100%;
+}
+.img-item2{
+    background: url('/css/images/pic2.png') no-repeat top center/100% 100%;
+}
+.img-item3{
+    background: url('/css/images/pic3.png') no-repeat top center/100% 100%;
+}
+.img-item4{
+    background: url('/css/images/pic4.png') no-repeat top center/100% 100%;
+}
+.img-item5{
+    background: url('/css/images/pic5.png') no-repeat top center/100% 100%;
+}
+
+
+
+#choice .inner .swiper-button-prev {
+    width: .28rem;
+    height: .52rem;
+    background: url('/css/images/bgs/arrow-left.png') no-repeat top center/100% 100%;
+}
+
+#choice  .inner .swiper-button-next {
+    width: .28rem;
+    height: .52rem;
+    background: url('/css/images/bgs/arrow-right.png') no-repeat top center/100% 100%;
+}
+
+#choice .gen-poster-btn-wrap{
+    display: flex;
+    align-items: center;
+    height: 17.6%;
+    text-align: center;
+    cursor: pointer;
+}
+#choice .gen-poster-btn-wrap .gen-poster-btn{
+    display: block;
+    margin: 0 auto;
+    width: 5rem;
+    line-height: 0.8rem;
+    background: url('/css/images/bgs/join-right-now.png') no-repeat top center/100% 100%;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 30%;
+    cursor: pointer;
+}
+
+
+#choice .hidden{
+    display: none;
+}
+    
+/* 如果设备像素大于等于2，则用2倍图 */
+@media screen and (-webkit-min-device-pixel-ratio: 2),screen and (min--moz-device-pixel-ratio: 2) {
+    #choice {
+      background: url('/css/images/bg@2x.png') no-repeat top center/100% 100%;
+    }
+
+    .img-item1{
+        background: url('/css/images/pic1@2x.png') no-repeat top center/100% 100%;
+    }
+    .img-item2{
+        background: url('/css/images/pic2@2x.png') no-repeat top center/100% 100%;
+    }
+    .img-item3{
+        background: url('/css/images/pic3@2x.png') no-repeat top center/100% 100%;
+    }
+    .img-item4{
+        background: url('/css/images/pic4@2x.png') no-repeat top center/100% 100%;
+    }
+    .img-item5{
+        background: url('/css/images/pic5@2x.png') no-repeat top center/100% 100%;
+    }
+}
+
+.choice_input_wrap {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #000;
+}
+
+.choice_input_wrap h3{
+    font-size: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.choice_input_wrap p{
+    font-size: 0.25rem;
+}
+
+.choice_input_wrap input{
+    font-size: 0.5rem;
+}
+
+
+
+

@@ -1,0 +1,48 @@
+#home{
+    background: url('/css/images/bg.png') no-repeat top center/100% 100%;
+}
+#home .inner{
+    text-align: center;
+    height:80%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    padding: 20px;
+    color: #fff;
+    font-family: 'mheiprc_light';
+}
+
+#home .inner .video-wrap{
+    position: relative;
+}
+
+#home .inner .video-wrap .video{
+    width: 100%;
+}
+
+#home .inner .p3-slogon{
+    margin: 0.7rem auto;
+}
+
+#home .inner .p3-slogon p{
+    margin: 1rem auto;
+    font-size: 30%;
+    line-height: 3;
+}
+
+#home .inner .join-right-now{
+    display: block;
+    margin: 0 auto;
+    line-height: 0.8rem;
+    background: url('/css/images/bgs/join-right-now.png') no-repeat top center/60% 100%;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 40%;
+    cursor: pointer;
+}
+
+/* 如果设备像素大于等于2，则用2倍图 */
+@media screen and (-webkit-min-device-pixel-ratio: 2),screen and (min--moz-device-pixel-ratio: 2) {
+    #home {
+      background: url('/css/images/bg@2x.png') no-repeat top center/100% 100%;
+    }
+}
