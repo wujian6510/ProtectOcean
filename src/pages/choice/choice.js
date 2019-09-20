@@ -1,9 +1,9 @@
 $(function(){
     var swiperData = [
-      "在海边不乱丢垃圾",
-      "以环保袋取代塑料袋",
-      "分类处理垃圾",
-      "不食用珍贵海洋生物",
+      "不让垃圾污染布氏鲸的家",
+      "不让人类打扰布氏鲸的生活",
+      "垃圾分类，从我做起",
+      "不让保护动物成为人类的盘中餐",
       "不非法捕猎海洋濒危生物",
     ];
     var $swiperWrapper = $(".swiper-wrapper");
@@ -47,9 +47,11 @@ $(function(){
       dialog.confirm('',$inputWrap,function(){
         const text = $inputWrap.find(".input")[0].value; //姓名
         if(!text){
-          return;
+          dialog.toast('请填写姓名！','error');
+          return false;
         }
-        console.log(text,swiperData[_activeIndex]);
+        console.log(text,swiperData[_activeIndex-1]);
+        return true;
       });
     });
 
