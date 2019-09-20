@@ -138,24 +138,30 @@
     height: 100%;
     text-align: center;
     display: flex;
-    padding: 1rem;
+    padding: 0.5rem;
     flex-direction: column;
     justify-content: flex-end;
-    color: #000;
+    color: #333;
 }
 
 .choice_input_wrap h3{
     font-size: 0.4rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
 }
 
 .choice_input_wrap p{
     font-size: 0.25rem;
+    margin-bottom: 0.1rem;
 }
 
 .choice_input_wrap input{
     font-size: 0.5rem;
-}
+    background: #FFFFFF;
+    border: 1px solid #AACCF6;
+    border-radius: 8px;
+    height: 50px;
+}   
 
 
 

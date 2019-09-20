@@ -627,10 +627,12 @@
 
         var btnArr = opts;
         if (typeof opts === 'function') {
-            btnArr = [{
-                txt: '取消',
-                color: false
-            }, {
+            btnArr = [
+            // {
+            //     txt: '取消',
+            //     color: false
+            // }, 
+            {
                 txt: '确定',
                 color: true,
                 callback: function () {
@@ -644,7 +646,10 @@
         var $dom = $('' +
             '<div class="mask-black-dialog" id="' + ID + '">' +
             '   <div class="m-confirm">' +
-            '       <div class="confirm-hd"><strong class="confirm-title">' + title + '</strong></div>' +
+            '       <div class="confirm-hd">' +
+            '          <strong class="confirm-title">' + title + '</strong>' +
+            '          <img class="confirm-close" src="/css/images/ico-close.png" />' +
+            '       </div>' +
             '       <div class="confirm-bd">' + (mesisDom ? '' : mes) + '</div>' +
             '   </div>' +
             '</div>');
@@ -652,6 +657,13 @@
         if(mesisDom){
             $dom.find(".confirm-bd").append(mes);
         }
+
+        var $closeImg = $dom.find(".confirm-close");
+        $closeImg.on('click', function(e){
+            e.stopPropagation();
+            ydui.util.pageScroll.unlock();
+            $dom.remove();
+        });
         // 遍历按钮数组
         var $btnBox = $('<div class="confirm-ft"></div>');
 
@@ -673,8 +685,9 @@
                     if (!btnArr[p].stay) {
                         // 释放页面滚动
                         ydui.util.pageScroll.unlock();
-                        btnArr[p].callback && btnArr[p].callback();
-                        $dom.remove();
+                        if(btnArr[p].callback && btnArr[p].callback()){
+                            $dom.remove();
+                        }
                     } else {
                         btnArr[p].callback && btnArr[p].callback();
                     }
