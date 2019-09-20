@@ -675,7 +675,7 @@
                         ydui.util.pageScroll.unlock();
                         btnArr[p].callback && btnArr[p].callback();
                         $dom.remove();
-                    }else{
+                    } else {
                         btnArr[p].callback && btnArr[p].callback();
                     }
                 });
