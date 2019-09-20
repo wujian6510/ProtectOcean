@@ -635,8 +635,8 @@
             {
                 txt: '确定',
                 color: true,
-                callback: function () {
-                    opts && opts();
+                callback: function ($dom) {
+                    opts && opts($dom);
                 }
             }];
         }
@@ -685,11 +685,9 @@
                     if (!btnArr[p].stay) {
                         // 释放页面滚动
                         ydui.util.pageScroll.unlock();
-                        if(btnArr[p].callback && btnArr[p].callback()){
-                            $dom.remove();
-                        }
+                        btnArr[p].callback && btnArr[p].callback($dom);
                     } else {
-                        btnArr[p].callback && btnArr[p].callback();
+                        btnArr[p].callback && btnArr[p].callback($dom);
                     }
                 });
             })(i);
