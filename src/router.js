@@ -13,6 +13,11 @@ $(function(){
 				templateUrl: './pages/choice/choice.html',
                 controller: './pages/choice/choice.js',
                 styles:'./pages/choice/choice.css',
+            },
+            'poster':{
+				templateUrl: './pages/poster/poster.html',
+                controller: './pages/poster/poster.js',
+                styles:'./pages/poster/poster.css',
 			},
             'defaults': 'home' //默认路由
         }

@@ -50,6 +50,7 @@ $(function(){
           return;
         }
         console.log(text,swiperData[_activeIndex]);
+        window.location.hash = router.stringify('poster',{animate:'right'});
       });
     });
 
