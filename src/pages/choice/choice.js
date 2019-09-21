@@ -52,12 +52,34 @@ $(function(){
           return;
         }
         $dom && $dom.remove();
-        window.location.hash = router.stringify('poster',
-          {
-            animate:'right',
-            name:name,
-            index:_activeIndex
-          });
+        let params = {
+          userName: name,
+        };
+        let no = 0;
+        params=JSON.stringify(params);
+        // $.ajax({
+        //   url: 'http://172.21.72.8:8889/envActivity/add',
+        //   type: 'post',
+        //   contentType:"application/json",
+        //   datatype:"json",
+        //   data: params,
+        //   success: function(res) {
+        //     console.log(res);
+        //     no = res.resultObj.rankingNum;
+        //     console.log(no);
+        //     window.location.hash = router.stringify('poster',
+        //     {
+        //       animate:'right',
+        //       name:name,
+        //       no,
+        //       index:_activeIndex
+        //     });
+        //   }
+        // })
+        console.log(httpAjax('http://172.21.72.8:8889/envActivity/add', 'post', params));
+        // .done((res)=>{
+        //   console.log(res);
+        // })
       });
     });
 });

@@ -61,7 +61,7 @@
     font-family: 'mheiprc_light';
 }
 .user-info {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .user-avatar p {
     font-size: 22px;
@@ -73,12 +73,12 @@
     margin: 20px auto;
 }
 .join-name{
-    margin: 10px 0;
-    font-size: 30px;
+    margin-bottom: 10px;
+    font-size: 25px;
 }
 .pronounce-wrap {
     position: absolute;
-    bottom: 20%;
+    bottom: 25%;
     left: 0;
     right: 0;
     width: 100%;

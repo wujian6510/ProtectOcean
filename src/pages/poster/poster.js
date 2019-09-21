@@ -1,6 +1,6 @@
 $(function(){
 
-    var swiperData = [
+  var swiperData = [
     "不让垃圾污染布氏鲸的家",
     "不让人类打扰布氏鲸的生活",
     "垃圾分类，从我做起",
@@ -14,6 +14,7 @@ $(function(){
     $(".inner").removeClass().addClass("inner").addClass('poster' + index);
     $(".js-content").text(swiperData[index-1]);
     $(".join-name").text(param.name);
+    $(".lmtext_bold").text(param.no);
     
     var qrcode = new QRCode(document.getElementById("qrcodeConIn"), {
         text: 'http://www.baidu.com',
@@ -41,7 +42,15 @@ $(function(){
         var height = shareContent.offsetHeight; //获取dom 高度
 
         var canvas = document.createElement("canvas"); //创建一个canvas节点
-        var scale = 1; //定义任意放大倍数 支持小数
+        var scale = changeDpr(); //定义任意放大倍数 支持小数
+
+        function changeDpr() {
+          if (window.devicePixelRatio && window.devicePixelRatio > 1) {
+            console.log(window.devicePixelRatio);
+              return window.devicePixelRatio;
+          }
+          return 1;
+        };
         canvas.width = width * scale; //定义canvas 宽度 * 缩放
         canvas.height = height * scale; //定义canvas高度 *缩放
         //放大后再缩小提高清晰度
@@ -55,6 +64,8 @@ $(function(){
           // logging: true, //日志开关，便于查看html2canvas的内部执行流程
           width: width, //dom 原始宽度
           height: height,
+          scale : window.devicePixelRatio,
+          dpi: window.devicePixelRatio,
           useCORS: true // 【重要】开启跨域配置
         };
         // 开始转化为canvs对象
@@ -72,7 +83,10 @@ $(function(){
           //转化后放哪 最好放在与 .wrap 父级下
           var base64ImgSrc = canvas.toDataURL("image/png");
           $('.poster-contanier-img').attr("src",base64ImgSrc);
-
+          $('.poster-contanier-img').css({
+            "width": canvas.width / scale + "px",
+            "height": canvas.height / scale + "px",
+          })
           var dialog = window.YDUI.dialog;
           dialog.notify('长按保存图片',1000);
         });
