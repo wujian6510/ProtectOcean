@@ -81,7 +81,7 @@ $(function(){
           // 【重要】默认转化的格式为png,也可设置为其他格式
         //   var img = Canvas2Image.convertToJPEG(canvas, canvas.width, canvas.height);
           //转化后放哪 最好放在与 .wrap 父级下
-          var base64ImgSrc = canvas.toDataURL("image/png");
+          var base64ImgSrc = canvas.toDataURL("image/png", 1.0);
           $('.poster-contanier-img').attr("src",base64ImgSrc);
           $('.poster-contanier-img').css({
             "width": canvas.width / scale + "px",
