@@ -12,9 +12,13 @@ enterFile.vendors=
     ['./src/js/libs/zepto.js',
     './src/js/libs/route.js',
     './src/router.js',
-     //'./src/js/libs/ydui.flexible.js',
-     //'./src/js/libs/ydui.js',
-    './src/js/public/common.js'
+    './src/js/libs/qrcode.js',
+    './src/js/libs/html2canvas.js',
+    './src/js/libs/weixinjs.js',
+    './src/utils/http.js',
+    './src/js/libs/swiper.js',
+    './src/js/libs/swiper.animate.min.js',
+    './src/js/libs/ydui.js'
 ];
 
 //公共js
@@ -42,7 +46,7 @@ pagePath.forEach(function (files) {
 const config={
     entry: enterFile,
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, 'ocean'),
         //publicPath: "../",
         filename: 'pages/[name]/[name].js',
         //chunkFilename: 'js/[id].chunk.js'

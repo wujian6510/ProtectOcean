@@ -1,6 +1,6 @@
 !function(window){
     var httpAjax = function (type, method,params,success,error){
-        var serverUrl = 'http://172.21.72.8:8889/';
+        var serverUrl = 'http://172.16.23.180:8889/';
         var options = {
             url : serverUrl + method,
             type : type,
