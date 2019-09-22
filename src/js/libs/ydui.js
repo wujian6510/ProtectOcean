@@ -810,7 +810,7 @@
 
             $('#' + ID).remove();
 
-            var $dom = $('<div id="' + ID + '"><div class="m-notify">' + (mes || '') + '</div></div>');
+            var $dom = $('<div class="shade"></div><div id="' + ID + '"><div class="m-notify">' + (mes || '') + '</div></div>');
 
             $body.append($dom);
 
