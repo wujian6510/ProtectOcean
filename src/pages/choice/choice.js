@@ -38,48 +38,36 @@ $(function(){
         },
     },
     });
-    //$(".swiper-slide").width('100%');
-
     var dialog = window.YDUI.dialog;
 
     $(document).on('click','.gen-poster-btn',function(){
       var $inputWrap = $('#input_name').clone().show();
 
       dialog.confirm('',$inputWrap,function($dom){
-        const name = $inputWrap.find(".input")[0].value; //姓名
+        var name = $inputWrap.find(".input")[0].value; //姓名
         if(!name){
           dialog.toast('请填写姓名！','error');
           return;
         }
         $dom && $dom.remove();
-        let params = {
-          userName: name,
-        };
-        let no = 0;
-        params=JSON.stringify(params);
-        // $.ajax({
-        //   url: 'http://172.21.72.8:8889/envActivity/add',
-        //   type: 'post',
-        //   contentType:"application/json",
-        //   datatype:"json",
-        //   data: params,
-        //   success: function(res) {
-        //     console.log(res);
-        //     no = res.resultObj.rankingNum;
-        //     console.log(no);
-        //     window.location.hash = router.stringify('poster',
-        //     {
-        //       animate:'right',
-        //       name:name,
-        //       no,
-        //       index:_activeIndex
-        //     });
-        //   }
-        // })
-        console.log(httpAjax('http://172.21.72.8:8889/envActivity/add', 'post', params));
-        // .done((res)=>{
-        //   console.log(res);
-        // })
+        var no = 0;
+        httpPost('envActivity/add',{userName : name}, function(res){
+          var resultObj = res.resultObj;
+          var no = resultObj.rankingNum;
+          var logId = resultObj.logId;
+          //将logId 存储到localStore里面
+          var util = window.YDUI.util;
+          util.localStorage.set('USER_LOGID', logId);
+          util.localStorage.set(logId, _activeIndex); 
+
+          window.location.hash = router.stringify('poster',
+          {
+            animate:'right',
+            name:name,
+            no,
+            index:_activeIndex
+          });
+        });
       });
     });
 });
