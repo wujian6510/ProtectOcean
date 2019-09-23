@@ -173,9 +173,6 @@ table {
   height: 100%;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  max-width: 750px;
-  min-width: 300px;
 }
 .g-scrollview {
   width: 100%;

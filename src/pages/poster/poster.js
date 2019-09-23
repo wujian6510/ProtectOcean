@@ -16,7 +16,7 @@ $(function(){
     $(".lmtext_bold").text(param.no);
     
     var qrcode = new QRCode(document.getElementById("qrcodeConIn"), {
-        text: 'http://172.16.23.180:8889/sea/index.html#home',
+        text: 'https://gy.ztesoft.com/sea/index.html#home',
         width: 74,
         height: 74,
         correctLevel : QRCode.CorrectLevel.H

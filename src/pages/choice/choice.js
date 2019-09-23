@@ -12,7 +12,7 @@ $(function(){
       '<div class="swiper-slide img-item'+(index+1)+'">'+
         '<div class="img-wrap">'+
             '<h3>我承诺</h3>'+
-            '<p>'+item+'</p>'+
+            '<h3 class="wrapContent">'+item+'</h3>'+
         '</div>'+
       '</div>'
       );
@@ -20,7 +20,8 @@ $(function(){
     });
 
     var _activeIndex = 0;
-    //const _width = $('.swiper-container').width();
+    const _width = document.body.clientWidth * 0.76;
+    console.log(_width);
     var innerSwiper = new Swiper('.swiper-container', {
       direction: 'horizontal',
       slidesPerView: 1,
@@ -28,8 +29,7 @@ $(function(){
       mousewheel: true,
       followFinger: false,
       loop: true,
-      centeredSlides: true,
-      //width:_width,
+      width:_width,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -44,7 +44,7 @@ $(function(){
 
     $(document).on('click','.gen-poster-btn',function(){
       var $inputWrap = $('#input_name').clone().show();
-
+      setTimeout("$('.input').focus()",500);
       dialog.confirm('',$inputWrap,function($dom){
         var name = $inputWrap.find(".input")[0].value; //姓名
         if(!name){

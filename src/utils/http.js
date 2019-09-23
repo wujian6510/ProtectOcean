@@ -1,6 +1,6 @@
 !function(window){
     var httpAjax = function (type, method,params,success,error){
-        var serverUrl = 'http://172.16.23.180:8889/';
+        var serverUrl = 'https://gy.ztesoft.com/';
         var options = {
             url : serverUrl + method,
             type : type,
