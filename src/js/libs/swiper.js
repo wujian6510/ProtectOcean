@@ -1394,7 +1394,6 @@
       } else {
         slideSize = (swiperSize - ((params.slidesPerView - 1) * spaceBetween)) / params.slidesPerView;
         if (params.roundLengths) { slideSize = Math.floor(slideSize); }
-
         if (slides[i]) {
           if (swiper.isHorizontal()) {
             slides[i].style.width = slideSize + "px";

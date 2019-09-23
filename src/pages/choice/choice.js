@@ -9,8 +9,8 @@ $(function(){
     
     swiperData.forEach(function(item,index){
       var $item = $('' + 
-      '<div class="swiper-slide">'+
-        '<div class="img-wrap img-item'+(index+1)+'">'+
+      '<div class="swiper-slide img-item'+(index+1)+'">'+
+        '<div class="img-wrap">'+
             '<h3>我承诺</h3>'+
             '<p>'+item+'</p>'+
         '</div>'+
@@ -20,6 +20,7 @@ $(function(){
     });
 
     var _activeIndex = 0;
+    //const _width = $('.swiper-container').width();
     var innerSwiper = new Swiper('.swiper-container', {
       direction: 'horizontal',
       slidesPerView: 1,
@@ -27,6 +28,7 @@ $(function(){
       mousewheel: true,
       followFinger: false,
       loop: true,
+      //width:_width,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
