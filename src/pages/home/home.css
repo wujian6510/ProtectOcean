@@ -11,6 +11,11 @@
     font-family: 'mheiprc_light';
 }
 
+#home .user-nickname {
+    width: 87%;
+    margin: 0 auto 20px;
+}
+
 #home .inner .video-wrap{
     position: relative;
 }

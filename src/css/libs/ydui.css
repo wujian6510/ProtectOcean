@@ -511,6 +511,18 @@ input[type="submit"].btn-hollow {
     transform: translate3d(0, -50px, 0);
   }
 }
+
+@keyframes shadeBg {
+  0% {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  50% {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
 .shade{
   width: 100%;
   height: 100%;
@@ -518,8 +530,7 @@ input[type="submit"].btn-hollow {
   position: fixed;
   top: 0;
   left: 0;
-  background-color:#000;
-  background: rgba(0, 0, 0, 0.3);
+  animation: shadeBg 2s linear forwards;
 }
 .m-notify {
   opacity: 1;
