@@ -28,6 +28,7 @@ $(function(){
       mousewheel: true,
       followFinger: false,
       loop: true,
+      centeredSlides: true,
       //width:_width,
       navigation: {
         nextEl: '.swiper-button-next',

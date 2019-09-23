@@ -18,6 +18,8 @@
     text-align: center;
     line-height: 2;
     height : 20%;
+    width: 60%;
+    margin: 0 auto;
 }
 
 #choice .inner .slogon-text h3{
@@ -26,6 +28,10 @@
     margin-top: 10%; 
 }
 
+/* .swiper-slide{
+    width: auto!important;
+} */
+
 #choice .inner .slogon-text p{
     font-size:0.25rem;
     text-align: center;
@@ -33,8 +39,8 @@
 }
 
 #choice .inner .swiper-container {
-    height: 70%;
-    width: 80%;
+    height: 65%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -149,15 +155,19 @@
     color: #333;
 }
 
-.choice_input_wrap h3{
-    font-size: 0.4rem;
-    margin-bottom: 0.4rem;
+#choice .inner .slogon-text h3 {
+    font-size: 0.5rem;
+    text-align: center;
+    margin-top: 10%;
     font-weight: 500;
 }
 
-.choice_input_wrap p{
-    font-size: 0.25rem;
-    margin-bottom: 0.1rem;
+#choice .inner .slogon-text p {
+    font-size: 0.28rem;
+    text-align: center;
+    margin-bottom: 10%;
+    line-height: 1.2;
+    font-weight: 500;
 }
 
 .choice_input_wrap input{
