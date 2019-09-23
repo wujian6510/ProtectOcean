@@ -5,37 +5,37 @@
 }
 
 .poster1{
-    background: url('/css/images/pic1.png') no-repeat top center/100% 100%;
+    background: url('../images/pic1.png') no-repeat top center/100% 100%;
 }
 .poster2{
-    background: url('/css/images/pic2.png') no-repeat top center/100% 100%;
+    background: url('../images/pic2.png') no-repeat top center/100% 100%;
 }
 .poster3{
-    background: url('/css/images/pic3.png') no-repeat top center/100% 100%;
+    background: url('../images/pic3.png') no-repeat top center/100% 100%;
 }
 .poster4{
-    background: url('/css/images/pic4.png') no-repeat top center/100% 100%;
+    background: url('../images/pic4.png') no-repeat top center/100% 100%;
 }
 .poster5{
-    background: url('/css/images/pic5.png') no-repeat top center/100% 100%;
+    background: url('../images/pic5.png') no-repeat top center/100% 100%;
 }
 
 /* 如果设备像素大于等于2，则用2倍图 */
 @media screen and (-webkit-min-device-pixel-ratio: 2),screen and (min--moz-device-pixel-ratio: 2) {
     .poster1{
-        background: url('/css/images/pic1@2x.png') no-repeat top center/100% 100%;
+        background: url('../images/pic1@2x.png') no-repeat top center/100% 100%;
     }
     .poster2{
-        background: url('/css/images/pic2@2x.png') no-repeat top center/100% 100%;
+        background: url('../images/pic2@2x.png') no-repeat top center/100% 100%;
     }
     .poster3{
-        background: url('/css/images/pic3@2x.png') no-repeat top center/100% 100%;
+        background: url('../images/pic3@2x.png') no-repeat top center/100% 100%;
     }
     .poster4{
-        background: url('/css/images/pic4@2x.png') no-repeat top center/100% 100%;
+        background: url('../images/pic4@2x.png') no-repeat top center/100% 100%;
     }
     .poster5{
-        background: url('/css/images/pic5@2x.png') no-repeat top center/100% 100%;
+        background: url('../images/pic5@2x.png') no-repeat top center/100% 100%;
     }
 }
 .bottom-slogon {

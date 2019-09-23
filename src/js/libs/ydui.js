@@ -648,7 +648,7 @@
             '   <div class="m-confirm">' +
             '       <div class="confirm-hd">' +
             '          <strong class="confirm-title">' + title + '</strong>' +
-            '          <img class="confirm-close" src="/css/images/ico-close.png" />' +
+            '          <img class="confirm-close" src="./pages/images/ico-close.png" />' +
             '       </div>' +
             '       <div class="confirm-bd">' + (mesisDom ? '' : mes) + '</div>' +
             '   </div>' +
