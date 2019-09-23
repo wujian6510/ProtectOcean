@@ -4,7 +4,7 @@
 #home .inner{
     text-align: center;
     height:80%;
-    margin-top: 20%;
+    margin-top: 10%;
     margin-bottom: 20%;
     padding: 20px;
     color: #fff;
@@ -12,8 +12,9 @@
 }
 
 #home .user-nickname {
+    margin-top: 20px;
     width: 87%;
-    margin: 0 auto 20px;
+    margin: 20px auto;
 }
 
 #home .inner .video-wrap{
@@ -21,6 +22,7 @@
 }
 
 #home .inner .video-wrap .video{
+    margin-top: 20px;
     width: 100%;
 }
 
@@ -29,9 +31,11 @@
 }
 
 #home .inner .p3-slogon p{
-    margin: 1rem auto;
-    font-size: 30%;
-    line-height: 3;
+    margin: 1.8rem auto;
+    font-size: 33%;
+    line-height: 2.5;
+    font-weight: 500;
+    font-family: 'mheiprc_light';
 }
 
 #home .inner .join-right-now{
@@ -41,8 +45,9 @@
     background: url('/css/images/bgs/join-right-now.png') no-repeat top center/60% 100%;
     text-decoration: none;
     letter-spacing: 1px;
-    font-size: 40%;
+    font-size: 35%;
     cursor: pointer;
+    font-weight: 500;
 }
 
 /* 如果设备像素大于等于2，则用2倍图 */
