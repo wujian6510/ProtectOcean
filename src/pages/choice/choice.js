@@ -20,7 +20,8 @@ $(function(){
     });
 
     var _activeIndex = 0;
-    //const _width = $('.swiper-container').width();
+    const _width = document.body.clientWidth * 0.76;
+    console.log(_width);
     var innerSwiper = new Swiper('.swiper-container', {
       direction: 'horizontal',
       slidesPerView: 1,
@@ -28,7 +29,7 @@ $(function(){
       mousewheel: true,
       followFinger: false,
       loop: true,
-      //width:_width,
+      width:_width,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
