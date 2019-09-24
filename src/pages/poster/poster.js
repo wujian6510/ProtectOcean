@@ -26,7 +26,7 @@ $(function(){
             $("#qrcodeConIn img").show();
             $("#qrcodeConIn canvas").hide();
             var canvas = $("#qrcodeConIn canvas")[0];
-            var dataURL = canvas.toDataURL("image/png");
+            var dataURL = canvas.toDataURL("image/png");  
             $("#qrcodeConIn img").attr("src",dataURL);
         }
     },0);

@@ -29,7 +29,7 @@ $(function(){
       mousewheel: true,
       followFinger: false,
       loop: true,
-      width:_width,
+      width:_width, 
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
