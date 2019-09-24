@@ -2,7 +2,7 @@ $(function(){
 
     var util = window.YDUI.util;
     //util.localStorage.clear();
-    var logId = util.localStorage.get('USER_LOGID');
+    var logId = util.localStorage.get('USER_LOGID_NEW');
     if(logId){ //如果存在logid，直接查询结果
         var _activeIndex = util.localStorage.get(logId);
         httpGet('envActivity/get/'+logId,{}, function(res){

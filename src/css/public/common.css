@@ -41,3 +41,26 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.hidden{
+	display: none;
+}
+
+.choice_input_wrap {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #333;
+}
+
+.choice_input_wrap input{
+    font-size: 0.5rem;
+    background: #FFFFFF;
+    border: 1px solid #AACCF6;
+    border-radius: 8px;
+    height: 50px;
+} 

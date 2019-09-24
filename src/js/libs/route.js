@@ -139,11 +139,7 @@
                 });
                 //console.log($(router.mainView)
                 loadScript(routerItem.controller);
-<<<<<<< Updated upstream
-                
-=======
                 // loadCss(routerItem.styles);
->>>>>>> Stashed changes
             },
             error: function(xhr, errorType, error){
                 if($(router.errorTemplateId).length===0){

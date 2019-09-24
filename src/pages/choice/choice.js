@@ -21,7 +21,6 @@ $(function(){
 
     var _activeIndex = 0;
     const _width = document.body.clientWidth * 0.76;
-    console.log(_width);
     var innerSwiper = new Swiper('.swiper-container', {
       direction: 'horizontal',
       slidesPerView: 1,
@@ -40,13 +39,13 @@ $(function(){
         },
     },
     });
+    $('#input_name').hide();
     var dialog = window.YDUI.dialog;
 
     setTimeout("$('#move-hori-hand').hide()",4000);
 
     $(document).on('click','.gen-poster-btn',function(){
       var $inputWrap = $('#input_name').clone().show();
-      setTimeout("$('.input').focus()",500);
       dialog.confirm('',$inputWrap,function($dom){
         var name = $inputWrap.find(".input")[0].value; //姓名
         if(!name){
@@ -61,7 +60,7 @@ $(function(){
           var logId = resultObj.logId;
           //将logId 存储到localStore里面
           var util = window.YDUI.util;
-          util.localStorage.set('USER_LOGID', logId);
+          util.localStorage.set('USER_LOGID_NEW', logId);
           util.localStorage.set(logId, _activeIndex); 
 
           window.location.hash = router.stringify('poster',

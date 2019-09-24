@@ -656,6 +656,7 @@
 
         if(mesisDom){
             $dom.find(".confirm-bd").append(mes);
+            setTimeout(function(){mes.find("input").focus();},500);
         }
 
         var $closeImg = $dom.find(".confirm-close");
