@@ -72,6 +72,36 @@
     margin-bottom: 10%;
     margin-top: 2%;
 }
+
+@keyframes moveHori
+{
+    0% {left: 60%;opacity:0.1}
+    50% {left: 50%;opacity:1}
+    100% {left:40%;opacity:0.1}
+}
+
+@-webkit-keyframes moveHori /*Safari and Chrome*/
+{
+    0% {left: 60%;opacity:0.1}
+    50% {left: 50%;opacity:1}
+    100% {left:40%;opacity:0.1}
+}
+.move-hori-hand {
+    position: absolute;
+    top: calc(50% - 16px);
+    left: calc(50% - 12.5px);
+    display: block;
+    width: .50rem;
+    height: .70rem;
+    animation: moveHori 2000ms linear 0ms 2 both running;
+    -webkit-animation: moveHori 2000ms linear 0ms 2 both running;
+    -moz-animation: moveHori 2000ms linear 0ms 2 both running;
+    -o-animation: moveHori 2000ms linear 0ms 2 both running;
+    -ms-animation: moveHori 2000ms linear 0ms 2 both running;
+    background: url('../images/hand.png') no-repeat top center/100% 100%;
+    display: block;
+    z-index:10000;
+}
 /* .img-wrap p{
     font-size: 0.25rem;
     margin-bottom: 10%;

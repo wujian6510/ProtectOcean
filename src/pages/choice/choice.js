@@ -42,6 +42,8 @@ $(function(){
     });
     var dialog = window.YDUI.dialog;
 
+    setTimeout("$('#move-hori-hand').hide()",4000);
+
     $(document).on('click','.gen-poster-btn',function(){
       var $inputWrap = $('#input_name').clone().show();
       setTimeout("$('.input').focus()",500);
