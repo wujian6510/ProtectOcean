@@ -21,6 +21,7 @@ $(function(){
         height: 74,
         correctLevel : QRCode.CorrectLevel.H
     });
+    //二维码
     setTimeout(function(){
         if(!$("#qrcodeConIn img").attr("src")){
             $("#qrcodeConIn img").show();
@@ -30,6 +31,8 @@ $(function(){
             $("#qrcodeConIn img").attr("src",dataURL);
         }
     },0);
+    var dialog = window.YDUI.dialog;
+    dialog.notify('长按保存图片',2000);
     setTimeout(function(){
         var cntElem = $('#poster')[0];
         window.pageYOffset = 0;
@@ -78,10 +81,8 @@ $(function(){
             "width": canvas.width / scale + "px",
             "height": canvas.height / scale + "px",
           })
-          var dialog = window.YDUI.dialog;
-          dialog.notify('长按保存图片',1000);
         });
-    },1000);
+    },0);
 
     
 })

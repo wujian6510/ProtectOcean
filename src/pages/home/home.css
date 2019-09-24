@@ -50,6 +50,10 @@
     font-weight: 500;
 }
 
+.hidden{
+    display: none;
+}
+
 /* 如果设备像素大于等于2，则用2倍图 */
 @media screen and (-webkit-min-device-pixel-ratio: 2),screen and (min--moz-device-pixel-ratio: 2) {
     #home {

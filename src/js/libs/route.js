@@ -118,15 +118,14 @@
             return false;
         }
 
+        loadCss(routerItem.styles);
         var routerAnimate=routeObj.param.animate ? routeObj.param.animate : routerItem.animate;
-
         $.ajax({
             type: 'GET',
             url: routerItem.templateUrl,
             dataType: 'html',
             success: function(data, status, xhr){
                 //加载页面，动画分享
-
                 if(routerAnimate=='right'){
                     $(router.mainView).html(data).children().addClass('page-from-right-to-center');
 
@@ -140,7 +139,7 @@
                 });
                 //console.log($(router.mainView)
                 loadScript(routerItem.controller);
-                loadCss(routerItem.styles);
+                
             },
             error: function(xhr, errorType, error){
                 if($(router.errorTemplateId).length===0){
