@@ -25,16 +25,6 @@
     text-align: center;
 }
 
-/* .swiper-slide{
-    width: auto!important;
-} */
-
-#choice .inner .slogon-text p{
-    font-size:0.25rem;
-    text-align: center;
-    line-height: 1.2;
-}
-
 #choice .inner .swiper-container {
     height: 67.5%;
     width:76%;
@@ -188,7 +178,7 @@
     font-size: 0.28rem;
     text-align: center;
     margin-bottom: 10%;
-    line-height: 1.2;
+    line-height: 1.4;
     font-weight: 500;
 }
   

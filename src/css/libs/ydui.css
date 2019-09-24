@@ -533,17 +533,17 @@ input[type="submit"].btn-hollow {
   opacity: 1;
   position: fixed;
   z-index: 50;
-  top: 50%;
+  top: 47%;
+  height: 6%;
   left: 25%;
   width: 50%;
   border: 1px solid #fff;
-  /* background-color:#000; */
   font-size: 18px;
   background-color: rgba(0, 0, 0, 0);
   line-height: .28rem;
   z-index: 1500;
   color: #FFF;
-  padding: .3rem .24rem;
+  padding: .2rem .24rem;
   opacity: 0;
   animation: downIn .2s linear forwards;
   word-break: break-all;
